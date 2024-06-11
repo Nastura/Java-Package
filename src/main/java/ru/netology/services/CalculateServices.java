@@ -15,13 +15,13 @@ public class CalculateServices {
             if (money >= threshold) {
                 count++; // отдыхаем
                 int spending = ((money - expenses) * 2 / 3);
-                System.out.println("Месяц: " + count + " Денег: " + money + " Буду отдыхать. Потратил: " + expenses + " затем еще " + spending);
+//                System.out.println("Месяц: " + count + " Денег: " + money + " Буду отдыхать. Потратил: " + expenses + " затем еще " + spending);
                 money = money - expenses;
                 money = money - (money * 2 / 3);
-                countDel++;
+                countDel++; // отдельный счетчик для подсчета месяцев отдыха
             } else {   // активно работаем
                 count++;
-                System.out.println("Месяц: " + count + " Денег: " + money + " Придётся работать. Заработал: +" + income + " потратил: " + expenses);
+//                System.out.println("Месяц: " + count + " Денег: " + money + " Придётся работать. Заработал: +" + income + " потратил: " + expenses);
                 money = money + income - expenses;
 
 
