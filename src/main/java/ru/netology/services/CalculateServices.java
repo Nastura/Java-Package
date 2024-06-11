@@ -9,23 +9,25 @@ public class CalculateServices {
     public int calculate(int income, int expenses, int threshold) {
         int count = 0; // счётчик месяцев отдыха
         int money = 0; // количество денег на счету
+        int countDel = 0; // счётчик месяцев отдыха
 //        int threshold = 20000; //threshold - порог
         for (int month = 0; month < 12; month++) {
             if (money >= threshold) {
                 count++; // отдыхаем
                 int spending = ((money - expenses) * 2 / 3);
-                System.out.println("Месяц: " + count +  " Денег: " + money + " Буду отдыхать. Потратил: " + expenses + " затем еще " + spending);
+                System.out.println("Месяц: " + count + " Денег: " + money + " Буду отдыхать. Потратил: " + expenses + " затем еще " + spending);
                 money = money - expenses;
                 money = money - (money * 2 / 3);
+                countDel++;
             } else {   // активно работаем
                 count++;
-                System.out.println("Месяц: " + count +  " Денег: " + money + " Придётся работать. Заработал: +" + income + " потратил: " + expenses);
+                System.out.println("Месяц: " + count + " Денег: " + money + " Придётся работать. Заработал: +" + income + " потратил: " + expenses);
                 money = money + income - expenses;
 
 
             }
         }
-        return count;
+        return countDel;
     }
 }
 
