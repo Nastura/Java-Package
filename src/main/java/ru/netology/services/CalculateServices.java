@@ -14,7 +14,7 @@ public class CalculateServices {
         for (int month = 0; month < 12; month++) {
             if (money >= threshold) {
                 count++; // отдыхаем
-                money = money - expenses - ((money - expenses) * 2 / 3);
+                money = (money - expenses) / 3;
                 countDel++; // отдельный счетчик для подсчета месяцев отдыха
             } else {   // активно работаем
                 count++;
@@ -29,17 +29,10 @@ public class CalculateServices {
 }
 
 // /*******************************/
+//                x - y - ((x - y) * 2 / 3); == x - y - x*2/3 + y*2/3 = 1/3*a -1/3*b = 1/3(a-b)
 //                int spending = ((money - expenses) * 2 / 3); //
 //                System.out.println("Месяц: " + count + " Денег: " + money  + " Буду отдыхать. Потратил: " + expenses + " затем еще " + spending);
 //                money = (money - expenses) - spending;
-//
-// деньги уменьшаются на expense,
-// а затем остаток накоплений ещё уменьшается в три раза — траты на отдых;
-//                int spending = expenses + ((money - expenses)/3*2);
-//                int spending = ((money - expenses)/3*2);
-//                // (money * 2 / 3)
-//                // int money = (money - expenses) - ((money - expenses) * 2 / 3);
-//
 ///*******************************
 
 
