@@ -8,19 +8,11 @@ import org.junit.jupiter.params.provider.CsvSource;
 public class AnnualLeaveCalculatorTest {
     // income, expenses и threshold
     @ParameterizedTest
-//    @CsvSource({
-//            "3, 10000,3000,20000",
-//            "2, 100000,60000,150000"
-//    })
     @CsvFileSource(files = "src/main/resources/CsvResurces.csv")
 
     public void Test1(int expected, int income, int expenses, int threshold) {
         CalculateServices services = new CalculateServices();
         int actual = services.calculate(income, expenses, threshold);
         Assertions.assertEquals(expected, actual);
-
-
     }
-
-
 }
