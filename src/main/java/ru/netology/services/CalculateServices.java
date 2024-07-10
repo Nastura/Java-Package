@@ -23,15 +23,6 @@ public class CalculateServices {
     }
 }
 
-// /*******************************/
-//                 money -= expenses;
-//                money /= 3;
-//                x - y - ((x - y) * 2 / 3); == x - y - x*2/3 + y*2/3 = 1/3*a -1/3*b = 1/3(a-b)
-//                int spending = ((money - expenses) * 2 / 3); //
-//                System.out.println("Месяц: " + count + " Денег: " + money  + " Буду отдыхать. Потратил: " + expenses + " затем еще " + spending);
-//                money = (money - expenses) - spending;
-///*******************************
-
 
 
 
